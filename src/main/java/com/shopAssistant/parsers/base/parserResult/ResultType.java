@@ -1,4 +1,4 @@
-package com.shopAssistant.parsers.parserResult;
+package com.shopAssistant.parsers.base.parserResult;
 
 /**
  * Created by fanta on 7/3/17.

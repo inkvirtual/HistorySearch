@@ -5,7 +5,7 @@ import com.shopAssistant.currency.Currency;
 /**
  * Created by fanta on 7/3/17.
  */
-public class Offer {
+public class Offer implements IOffer{
     protected Integer price;
     protected Currency currency;
     protected Long timeStamp;
