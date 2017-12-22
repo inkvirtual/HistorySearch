@@ -4,7 +4,7 @@ import com.shopAssistant.Main;
 import com.shopAssistant.offer.AbstractOffer;
 import com.shopAssistant.parser.offer.IOfferParser;
 import com.shopAssistant.parser.profile.IProfileParser;
-import com.shopAssistant.profiles.Profile;
+import com.shopAssistant.profiles.IProfile;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -44,8 +44,8 @@ public class Parser {
         return null;
     }
 
-    public Profile parseProfile(String page) {
-        Profile result = null;
+    public IProfile parseProfile(String page) {
+        IProfile result = null;
 
         for (IProfileParser parser : profileParsers) {
             result = parser.parse(page);
