@@ -1,7 +1,5 @@
 package com.shopAssistant.configuration;
 
-import com.shopAssistant.resources.ResourcesHelper;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,8 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-//public class configuration implements configuration.IConfiguration {
-public class Configuration {
+public class Configuration implements IConfiguration {
     private Map<String, String> properties;
     private ResourcesHelper resourcesHelper;
 
@@ -46,7 +43,7 @@ public class Configuration {
             }
     }
 
-//    @Override
+    @Override
     public Map<String, String> getProperties() {
         return this.properties;
     }

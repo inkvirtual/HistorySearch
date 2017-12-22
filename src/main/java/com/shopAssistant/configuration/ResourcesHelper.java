@@ -1,4 +1,4 @@
-package com.shopAssistant.resources;
+package com.shopAssistant.configuration;
 
 import com.shopAssistant.Main;
 

@@ -1,30 +1,34 @@
-package com.shopAssistant.profiles.base;
+package com.shopAssistant.profiles;
 
-import com.shopAssistant.profiles.base.IProfile;
-
+import java.util.HashSet;
 import java.util.Set;
 
 /**
  * Created by fanta on 7/3/17.
  */
 public class Profile implements IProfile {
-    protected String name;
-    protected Set<String> phoneNumbers;
+    private String name;
+    private Set<String> phoneNumbers;
 
-    public Profile(String name, Set<String> phoneNumbers) {
+    public Profile(String name) {
         this.name = name;
-        this.phoneNumbers = phoneNumbers;
+        this.phoneNumbers = new HashSet<>();
     }
 
     public void addPhoneNumber(String number) {
-        phoneNumbers.add(number);
+        if (number != null || number.length() != 0)
+            phoneNumbers.add(number);
     }
 
+
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public Set<String> getPhoneNumbers() {
         return phoneNumbers;
     }
+
 }

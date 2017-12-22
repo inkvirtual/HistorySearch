@@ -3,7 +3,7 @@ package com.shopAssistant.currency;
 /**
  * Created by fanta on 7/3/17.
  */
-public class Currency {
+public abstract class Currency {
     private String symbol;
     private String code;
     private String description;
@@ -25,4 +25,5 @@ public class Currency {
     public String getDescription() {
         return description;
     }
+
 }
