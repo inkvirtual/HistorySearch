@@ -9,6 +9,14 @@ public class CarOffer extends AbstractOffer {
     private Integer year;
     private Integer mileage;
 
+    public CarOffer() {
+        super();
+        manufacturer = null;
+        model = null;
+        year = null;
+        mileage = null;
+    }
+
     public String getManufacturer() {
         return manufacturer;
     }

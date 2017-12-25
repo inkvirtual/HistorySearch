@@ -2,6 +2,8 @@ package com.shopAssistant.configuration;
 
 import com.shopAssistant.Main;
 
+import java.util.logging.Level;
+
 public class ResourcesHelper {
     private String resourcesPath;
 
@@ -29,7 +31,7 @@ public class ResourcesHelper {
 
     public String getFullPath(String fileName) {
         if (null == fileName || fileName.length() == 0) {
-            Main.LOGGER.error("Null or empty <filename> argument");
+            Main.LOGGER.log(Level.SEVERE, "Null or empty <filename> argument");
             return null;
         }
 

@@ -8,6 +8,7 @@ import com.shopAssistant.profiles.IProfile;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
 
 /**
  * Created by fanta on 7/4/17.
@@ -39,7 +40,7 @@ public class Parser {
         }
 
         if (result == null)
-            Main.LOGGER.error("Parse AbstractOffer failed.");
+            Main.LOGGER.log(Level.SEVERE, "Parse AbstractOffer failed.");
 
         return null;
     }
@@ -54,7 +55,7 @@ public class Parser {
         }
 
         if (result == null)
-            Main.LOGGER.error("Parse Profile failed.");
+            Main.LOGGER.log(Level.SEVERE, "Parse Profile failed.");
 
         return null;
     }
