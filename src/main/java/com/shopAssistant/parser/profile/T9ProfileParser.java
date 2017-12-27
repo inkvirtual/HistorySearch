@@ -10,8 +10,13 @@ public class T9ProfileParser implements IProfileParser {
     public static final String NAME = "999";
 
     @Override
-    public String getName(String page) {
+    public String getName() {
         return NAME;
+    }
+
+    @Override
+    public String getProfileName(String page) {
+        throw new NotImplementedException();
     }
 
     @Override

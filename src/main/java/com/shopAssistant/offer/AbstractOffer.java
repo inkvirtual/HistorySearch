@@ -1,8 +1,10 @@
 package com.shopAssistant.offer;
 
-import com.shopAssistant.application.PhoneNumber;
-import com.shopAssistant.currency.Currency;
+import com.shopAssistant.phoneNumber.PhoneNumber;
+import com.shopAssistant.currency.AbstractCurrency;
 
+import java.awt.*;
+import java.net.URL;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,10 +17,12 @@ public abstract class AbstractOffer {
     private final static Logger LOGGER = Logger.getLogger("Offer");
 
     private Integer price;
-    private Currency currency;
+    private AbstractCurrency currency;
     private Date publicationTime;
     private Long id;
     private String offerText;
+    private URL url;
+    private Set<Image> images;
     private String profileName;
     private Set<PhoneNumber> phoneNumbers;
 
@@ -28,8 +32,32 @@ public abstract class AbstractOffer {
         publicationTime = null;
         id = null;
         offerText = null;
+        url = null;
+        images = new HashSet<>();
         profileName = null;
         phoneNumbers = new HashSet<>();
+    }
+
+    public Set<Image> getImages() {
+        return images;
+    }
+
+    public void setImages(Set<Image> images) {
+        if (images != null)
+            this.images = images;
+    }
+
+    public void addImage(Image image) {
+        if (image != null)
+            this.images.add(image);
+    }
+
+    public URL getUrl() {
+        return url;
+    }
+
+    public void setUrl(URL url) {
+        this.url = url;
     }
 
     public Long getId() {
@@ -77,11 +105,11 @@ public abstract class AbstractOffer {
         this.price = price;
     }
 
-    public Currency getCurrency() {
+    public AbstractCurrency getCurrency() {
         return currency;
     }
 
-    public void setCurrency(Currency currency) {
+    public void setCurrency(AbstractCurrency currency) {
         this.currency = currency;
     }
 

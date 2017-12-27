@@ -1,8 +1,8 @@
 package com.shopAssistant.currency.currencies;
 
-import com.shopAssistant.currency.Currency;
+import com.shopAssistant.currency.AbstractCurrency;
 
-public class USD extends Currency {
+public class USD extends AbstractCurrency {
     public USD() {
         super("$", "USD", "United States Dollar");
     }

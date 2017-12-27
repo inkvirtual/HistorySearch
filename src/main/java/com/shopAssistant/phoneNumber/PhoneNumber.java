@@ -1,5 +1,6 @@
-package com.shopAssistant.application;
+package com.shopAssistant.phoneNumber;
 
+// TODO: this class needs to be updated and improved
 public final class PhoneNumber {
     private Integer countryCode;
     private Long number;

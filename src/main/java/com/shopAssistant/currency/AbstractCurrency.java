@@ -3,12 +3,12 @@ package com.shopAssistant.currency;
 /**
  * Created by fanta on 7/3/17.
  */
-public abstract class Currency {
+public abstract class AbstractCurrency {
     private String symbol;
     private String code;
     private String description;
 
-    public Currency(String symbol, String code, String description) {
+    public AbstractCurrency(String symbol, String code, String description) {
         this.symbol = symbol;
         this.code = code;
         this.description = description;
@@ -26,4 +26,12 @@ public abstract class Currency {
         return description;
     }
 
+    @Override
+    public String toString() {
+        return "AbstractCurrency{" +
+                "symbol='" + symbol + '\'' +
+                ", code='" + code + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

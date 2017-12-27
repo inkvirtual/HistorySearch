@@ -1,8 +1,8 @@
 package com.shopAssistant.currency.currencies;
 
-import com.shopAssistant.currency.Currency;
+import com.shopAssistant.currency.AbstractCurrency;
 
-public class EURO extends Currency {
+public class EURO extends AbstractCurrency {
     public EURO() {
         super("", "EURO", "Euro");
     }
